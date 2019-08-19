@@ -13,3 +13,17 @@ init(axis: DirectionX, numberOfPages: Int,
          @ViewBuilder content: @escaping () -> Content)
 ```
 
+This is how the above custom wrapper could be used:
+```swift
+SwiftyUIScrollView(axis: .horizontal, numberOfPages: self.contentArray.count, pagingEnabled: true, pageControlEnabled: true, hideScrollIndicators: true) {
+                    HStack(spacing: 0) {
+                        ForEach(self.contentArray, id: \.id) { item in
+                            TestView(data: item)
+                                    .frame(width: g.size.width, height: g.size.height)
+                        }
+                    }
+            }.frame(width: g.size.width)
+```
+
+If you are using HStack, make sure you set the ``` axis ``` - .horizontal, if using VStack make sure you use .vertical. This is madatory in order to have pagination and page controls to work for both directions. 
+
