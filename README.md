@@ -25,5 +25,13 @@ SwiftyUIScrollView(axis: .horizontal, numberOfPages: self.contentArray.count, pa
             }.frame(width: g.size.width)
 ```
 
-If you are using HStack, make sure you set the ``` axis ``` - .horizontal, if using VStack make sure you use .vertical. This is madatory in order to have pagination and page controls to work for both directions. 
+The ```DirectionX``` enum contains two directions: 
 
+```swift
+enum DirectionX {
+    case horizontal
+    case vertical
+}
+```
+
+If you are using ```HStack```, make sure you set the ``` axis ```  in initializer to- .horizontal, if using ``` VStack ``` make sure you use .vertical. This is madatory in order to have pagination and page controls to work for both directions. 
