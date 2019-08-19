@@ -8,8 +8,8 @@ init(axis: DirectionX, numberOfPages: Int,
          pagingEnabled: Bool,
          pageControlEnabled: Bool,
          hideScrollIndicators: Bool,
-         currentPageIndicator: UIColor? = .white,
-         pageIndicatorTintColor: UIColor? = .gray,
+         currentPageIndicator: UIColor?,
+         pageIndicatorTintColor: UIColor?,
          @ViewBuilder content: @escaping () -> Content)
 ```
 
